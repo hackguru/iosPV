@@ -6,4 +6,12 @@
 //  Copyright (c) 2015 Edward Rezaimehr. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ListItem.h"
+
+@implementation ListItem
+
+@synthesize videoImage = _videoImage;
+@synthesize playButton = _playButton;
+@synthesize descriptionLabel = _descriptionLabel;
+
+@end

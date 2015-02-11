@@ -9,6 +9,10 @@
 #import "SidebarTableViewController.h"
 #import "SWRevealViewController.h"
 #import "MenuItem.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "ViewController.h"
+
+#define kMenuItemsUrl @"http://www.aidin4app.com/api/PV/menu/0"
 
 @interface SidebarTableViewController ()
 
@@ -16,12 +20,71 @@
 
 @implementation SidebarTableViewController {
     NSArray *menuItems;
+    NSURLConnection *currentConnection;
+    BOOL _draggingView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSURL *restURL = [NSURL URLWithString:kMenuItemsUrl];
+    NSURLRequest *restRequest = [NSURLRequest requestWithURL:restURL];
     
-    menuItems = @[@"Persian Video", @"news", @"news2"];
+    // we will want to cancel any current connections
+    if(currentConnection)
+    {
+        [currentConnection cancel];
+        currentConnection = nil;
+        self.apiReturnData = nil;
+    }
+    
+    currentConnection = [[NSURLConnection alloc]   initWithRequest:restRequest delegate:self];
+    
+    // If the connection was successful, create the data that will be returned.
+    self.apiReturnData = [NSMutableData data];
+    
+    menuItems = [NSArray arrayWithObjects:[[NSDictionary alloc] initWithObjectsAndKeys: @"در حال دریافت اطلاعات ...", @"title", nil], nil];
+    _draggingView = NO;
+
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    _draggingView = YES;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    _draggingView = NO;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger pullingDetectFrom = 50;
+    if (scrollView.contentOffset.y < -pullingDetectFrom) {
+        _draggingView = NO;
+        //Pull Down
+        NSURL *restURL = [NSURL URLWithString:kMenuItemsUrl];
+        NSURLRequest *restRequest = [NSURLRequest requestWithURL:restURL];
+        
+        // we will want to cancel any current connections
+        if(currentConnection)
+        {
+            [currentConnection cancel];
+            currentConnection = nil;
+            self.apiReturnData = nil;
+        }
+        
+        currentConnection = [[NSURLConnection alloc]   initWithRequest:restRequest delegate:self];
+        
+        // If the connection was successful, create the data that will be returned.
+        self.apiReturnData = [NSMutableData data];
+        
+    } else if (scrollView.contentSize.height <= scrollView.frame.size.height && scrollView.contentOffset.y > pullingDetectFrom) {
+        _draggingView = NO;
+        //Pull Up
+    } else if (scrollView.contentSize.height > scrollView.frame.size.height &&
+               scrollView.contentSize.height-scrollView.frame.size.height-scrollView.contentOffset.y < -pullingDetectFrom) {
+        _draggingView = NO;
+        //Pull Up
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,29 +107,53 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger index = indexPath.row;
-    NSString *identifier = @"feed_cell";
-    NSString *title = menuItems[index];
+    NSString *identifier = @"feed_item";
     UITableViewCell *cell;
-    if (index == 0 ){
-        identifier = @"title";
-        cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    } else {
-        cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-        [((MenuItem *)cell).nameLabel setText:title];
-    }
+    cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    NSDictionary *menuItemDictObject = [menuItems objectAtIndex:index];
+    [((MenuItem *)cell).nameLabel setText:[menuItemDictObject valueForKey:@"title"]];
+    [((MenuItem *)cell).thumbnailImageView sd_setImageWithURL:[NSURL URLWithString:[menuItemDictObject valueForKey:@"thumb"]]
+                                             placeholderImage:[UIImage imageNamed:@"logo"]];
+
     return cell;
 }
 
+- (void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse *)response {
+    [self.apiReturnData setLength:0];
+}
+
+- (void)connection:(NSURLConnection*)connection didReceiveData:(NSData*)data {
+    [self.apiReturnData appendData:data];
+}
+
+- (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error {
+    NSLog(@"URL Connection Failed!");
+    currentConnection = nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    currentConnection = nil;
+    NSError *error;
+    NSMutableDictionary *returnedDict = [NSJSONSerialization JSONObjectWithData:self.apiReturnData options:kNilOptions error:&error];
+    
+    if (error != nil) {
+        NSLog(@"%@", [error localizedDescription]);
+    } else {
+        menuItems = [returnedDict objectForKey:@"feed"];
+        [self.tableView reloadData];
+    }
+}
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     // Set the title of navigation bar by using the menu items
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-    [destViewController setTitle: [[menuItems objectAtIndex:indexPath.row] capitalizedString]];
+    UINavigationController *navController = segue.destinationViewController;
+    ViewController *nextController = [navController childViewControllers].firstObject;
+    [nextController setTitle: [[menuItems objectAtIndex:indexPath.row] valueForKey:@"title"]];
+    [nextController setContentId: [[menuItems objectAtIndex:indexPath.row] valueForKey:@"value"]];
 }
 
 

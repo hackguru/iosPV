@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SidebarTableViewController : UITableViewController
-
+@interface SidebarTableViewController : UITableViewController <NSURLConnectionDelegate>
+@property (retain, nonatomic) NSMutableData *apiReturnData;
 @end

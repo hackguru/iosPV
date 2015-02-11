@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B7FCFA847CCCB26ABECB5CE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05766B34BFE341F52DEC7C2 /* libPods.a */; };
 		AC14CDC91A64E709009509D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDC81A64E709009509D5 /* main.m */; };
 		AC14CDCC1A64E709009509D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDCB1A64E709009509D5 /* AppDelegate.m */; };
 		AC14CDCF1A64E709009509D5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDCE1A64E709009509D5 /* ViewController.m */; };
@@ -14,6 +15,11 @@
 		AC14CDD41A64E709009509D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC14CDD31A64E709009509D5 /* Images.xcassets */; };
 		AC14CDD71A64E709009509D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC14CDD51A64E709009509D5 /* LaunchScreen.xib */; };
 		AC14CDE31A64E709009509D5 /* PersianVideoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDE21A64E709009509D5 /* PersianVideoTests.m */; };
+		AC14CDEF1A64E85E009509D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDEE1A64E85E009509D5 /* SWRevealViewController.m */; };
+		AC14CDF41A64F698009509D5 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDF11A64F698009509D5 /* MenuItem.m */; };
+		AC14CDF51A64F698009509D5 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC14CDF31A64F698009509D5 /* SidebarTableViewController.m */; };
+		AC8DE4CD1A6B4869006330E9 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8DE4CC1A6B4869006330E9 /* MediaPlayer.framework */; };
+		AC8DE4D01A6B5688006330E9 /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AC8DE4CF1A6B5688006330E9 /* ListItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C50C409904DAC5AA68DE084 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A05766B34BFE341F52DEC7C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94517D5A9C78D7D9649FBB8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC14CDC31A64E709009509D5 /* PersianVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersianVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14CDC71A64E709009509D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC14CDC81A64E709009509D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +49,15 @@
 		AC14CDDC1A64E709009509D5 /* PersianVideoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersianVideoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC14CDE11A64E709009509D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC14CDE21A64E709009509D5 /* PersianVideoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersianVideoTests.m; sourceTree = "<group>"; };
+		AC14CDED1A64E7FD009509D5 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		AC14CDEE1A64E85E009509D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AC14CDF01A64F698009509D5 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		AC14CDF11A64F698009509D5 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		AC14CDF21A64F698009509D5 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		AC14CDF31A64F698009509D5 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		AC8DE4CC1A6B4869006330E9 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		AC8DE4CE1A6B5676006330E9 /* ListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		AC8DE4CF1A6B5688006330E9 /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8DE4CD1A6B4869006330E9 /* MediaPlayer.framework in Frameworks */,
+				4B7FCFA847CCCB26ABECB5CE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +80,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D0A693F52D87BD5F5C6B4EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C50C409904DAC5AA68DE084 /* Pods.debug.xcconfig */,
+				A94517D5A9C78D7D9649FBB8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC14CDBA1A64E709009509D5 = {
 			isa = PBXGroup;
 			children = (
+				AC8DE4CC1A6B4869006330E9 /* MediaPlayer.framework */,
 				AC14CDC51A64E709009509D5 /* PersianVideo */,
 				AC14CDDF1A64E709009509D5 /* PersianVideoTests */,
 				AC14CDC41A64E709009509D5 /* Products */,
+				9D0A693F52D87BD5F5C6B4EC /* Pods */,
+				D9108615EB6D856194562C91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +113,17 @@
 		AC14CDC51A64E709009509D5 /* PersianVideo */ = {
 			isa = PBXGroup;
 			children = (
+				AC14CDF01A64F698009509D5 /* MenuItem.h */,
+				AC14CDF11A64F698009509D5 /* MenuItem.m */,
+				AC14CDF21A64F698009509D5 /* SidebarTableViewController.h */,
+				AC14CDF31A64F698009509D5 /* SidebarTableViewController.m */,
+				AC14CDEC1A64E7A3009509D5 /* SWRevealViewController */,
 				AC14CDCA1A64E709009509D5 /* AppDelegate.h */,
 				AC14CDCB1A64E709009509D5 /* AppDelegate.m */,
 				AC14CDCD1A64E709009509D5 /* ViewController.h */,
 				AC14CDCE1A64E709009509D5 /* ViewController.m */,
+				AC8DE4CE1A6B5676006330E9 /* ListItem.h */,
+				AC8DE4CF1A6B5688006330E9 /* ListItem.m */,
 				AC14CDD01A64E709009509D5 /* Main.storyboard */,
 				AC14CDD31A64E709009509D5 /* Images.xcassets */,
 				AC14CDD51A64E709009509D5 /* LaunchScreen.xib */,
@@ -119,6 +158,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AC14CDEC1A64E7A3009509D5 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC14CDED1A64E7FD009509D5 /* SWRevealViewController.h */,
+				AC14CDEE1A64E85E009509D5 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		D9108615EB6D856194562C91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A05766B34BFE341F52DEC7C2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC14CDE61A64E709009509D5 /* Build configuration list for PBXNativeTarget "PersianVideo" */;
 			buildPhases = (
+				E272E9EFB5DD88E27DCBFF71 /* Check Pods Manifest.lock */,
 				AC14CDBF1A64E709009509D5 /* Sources */,
 				AC14CDC01A64E709009509D5 /* Frameworks */,
 				AC14CDC11A64E709009509D5 /* Resources */,
+				F7CDF8C83A4D3CD48E3A3D3F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +226,11 @@
 				TargetAttributes = {
 					AC14CDC21A64E709009509D5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5L3DY4FL7D;
 					};
 					AC14CDDB1A64E709009509D5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5L3DY4FL7D;
 						TestTargetID = AC14CDC21A64E709009509D5;
 					};
 				};
@@ -214,6 +274,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E272E9EFB5DD88E27DCBFF71 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7CDF8C83A4D3CD48E3A3D3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC14CDBF1A64E709009509D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +315,10 @@
 				AC14CDCF1A64E709009509D5 /* ViewController.m in Sources */,
 				AC14CDCC1A64E709009509D5 /* AppDelegate.m in Sources */,
 				AC14CDC91A64E709009509D5 /* main.m in Sources */,
+				AC8DE4D01A6B5688006330E9 /* ListItem.m in Sources */,
+				AC14CDEF1A64E85E009509D5 /* SWRevealViewController.m in Sources */,
+				AC14CDF51A64F698009509D5 /* SidebarTableViewController.m in Sources */,
+				AC14CDF41A64F698009509D5 /* MenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,21 +440,29 @@
 		};
 		AC14CDE71A64E709009509D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C50C409904DAC5AA68DE084 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PersianVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		AC14CDE81A64E709009509D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94517D5A9C78D7D9649FBB8 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PersianVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -365,6 +470,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -376,6 +483,7 @@
 				INFOPLIST_FILE = PersianVideoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersianVideo.app/PersianVideo";
 			};
 			name = Debug;
@@ -384,6 +492,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -391,6 +501,7 @@
 				INFOPLIST_FILE = PersianVideoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersianVideo.app/PersianVideo";
 			};
 			name = Release;
@@ -414,6 +525,7 @@
 				AC14CDE81A64E709009509D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC14CDE91A64E709009509D5 /* Build configuration list for PBXNativeTarget "PersianVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +534,7 @@
 				AC14CDEB1A64E709009509D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
