@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A9FC54B2-FD1D-448B-A03B-030F22326681</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PersianVideo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF41738E88C324D93C276A67996A63D32AF0D73B</key>
+		<string>https://github.com/hackguru/iosPV.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PersianVideo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF41738E88C324D93C276A67996A63D32AF0D73B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hackguru/iosPV.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF41738E88C324D93C276A67996A63D32AF0D73B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF41738E88C324D93C276A67996A63D32AF0D73B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PersianVideo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

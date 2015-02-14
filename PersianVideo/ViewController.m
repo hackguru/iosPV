@@ -144,7 +144,7 @@
     [self.player setFullscreen:YES animated:YES];
     
     
-    NSURL *restURL = [NSURL URLWithString:[NSString stringWithFormat:kMenuItemsUrl, [itemDictObject valueForKey:@"videoid"]]];
+    NSURL *restURL = [NSURL URLWithString:[NSString stringWithFormat:kPlayCountUrl, [itemDictObject valueForKey:@"videoid"]]];
     NSURLRequest *restRequest = [NSURLRequest requestWithURL:restURL];
     [NSURLConnection sendAsynchronousRequest:restRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         return;
